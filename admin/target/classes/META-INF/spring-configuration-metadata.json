@@ -1,0 +1,165 @@
+{
+  "groups": [
+    {
+      "name": "mybatis",
+      "type": "com.sparksys.mall.admin.properties.MyBatisProperties",
+      "sourceType": "com.sparksys.mall.admin.properties.MyBatisProperties"
+    },
+    {
+      "name": "spring.datasource.master",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.sparksys.mall.admin.config.DataSourceConfig",
+      "sourceMethod": "masterDataSource()"
+    },
+    {
+      "name": "spring.datasource.slave1",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.sparksys.mall.admin.config.DataSourceConfig",
+      "sourceMethod": "slave1DataSource()"
+    },
+    {
+      "name": "spring.redis",
+      "type": "com.sparksys.mall.admin.properties.RedisProperties",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties"
+    },
+    {
+      "name": "spring.redis.cache",
+      "type": "com.sparksys.mall.admin.properties.RedisProperties$CacheBean",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties",
+      "sourceMethod": "getCache()"
+    },
+    {
+      "name": "spring.redis.jedis",
+      "type": "com.sparksys.mall.admin.properties.RedisProperties$JedisBean",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties",
+      "sourceMethod": "getJedis()"
+    },
+    {
+      "name": "spring.redis.jedis.pool",
+      "type": "com.sparksys.mall.admin.properties.RedisProperties$JedisBean$PoolBean",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$JedisBean",
+      "sourceMethod": "getPool()"
+    },
+    {
+      "name": "spring.redisson",
+      "type": "com.sparksys.mall.admin.properties.RedissonProperties",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mybatis.mapper-locations",
+      "type": "java.lang.String",
+      "sourceType": "com.sparksys.mall.admin.properties.MyBatisProperties"
+    },
+    {
+      "name": "mybatis.type-aliases-package",
+      "type": "java.lang.String",
+      "sourceType": "com.sparksys.mall.admin.properties.MyBatisProperties"
+    },
+    {
+      "name": "spring.redis.cache.database",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$CacheBean",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.redis.cache.expire",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$CacheBean",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.redis.cache.host",
+      "type": "java.lang.String",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$CacheBean"
+    },
+    {
+      "name": "spring.redis.cache.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$CacheBean",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.redis.cache.timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$CacheBean",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.redis.jedis.pool.max-active",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$JedisBean$PoolBean",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.redis.jedis.pool.max-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$JedisBean$PoolBean",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.redis.jedis.pool.max-wait",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$JedisBean$PoolBean",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.redis.jedis.pool.min-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedisProperties$JedisBean$PoolBean",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.redisson.address",
+      "type": "java.lang.String",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties"
+    },
+    {
+      "name": "spring.redisson.connection-minimum-idle-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties",
+      "defaultValue": 10
+    },
+    {
+      "name": "spring.redisson.connection-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties",
+      "defaultValue": 64
+    },
+    {
+      "name": "spring.redisson.master-connection-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties",
+      "defaultValue": 250
+    },
+    {
+      "name": "spring.redisson.master-name",
+      "type": "java.lang.String",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties"
+    },
+    {
+      "name": "spring.redisson.password",
+      "type": "java.lang.String",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties"
+    },
+    {
+      "name": "spring.redisson.sentinel-addresses",
+      "type": "java.lang.String[]",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties"
+    },
+    {
+      "name": "spring.redisson.slave-connection-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties",
+      "defaultValue": 250
+    },
+    {
+      "name": "spring.redisson.timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.sparksys.mall.admin.properties.RedissonProperties",
+      "defaultValue": 3000
+    }
+  ],
+  "hints": []
+}

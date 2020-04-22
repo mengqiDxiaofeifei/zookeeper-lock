@@ -1,0 +1,79 @@
+server:
+  port: 8501
+  error:
+    whitelabel:
+      enabled: false
+spring:
+  application:
+    name: admin
+  mvc:
+    throw-exception-if-no-handler-found: true
+    resources:
+      add-mappings: false
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  datasource:
+    tomcat:
+      max-wait: 10000
+      max-active: 300
+      test-on-borrow: true
+      initial-size=: 20
+    type: com.alibaba.druid.pool.DruidDataSource
+    master:
+      jdbc-url: jdbc:mysql://106.12.185.121:3340/seckill?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 123456
+      driverClassName: com.mysql.cj.jdbc.Driver
+    slave1:
+      jdbc-url: jdbc:mysql://106.12.185.121:3340/seckill?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 123456
+      driverClassName: com.mysql.cj.jdbc.Driver
+    slave2:
+      jdbc-url: jdbc:mysql://106.12.185.121:3340/seckill?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 123456
+      driverClassName: com.mysql.cj.jdbc.Driver
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    filters: config,stat,log4j2
+  cache:
+    type: redis
+  redis:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    cache:
+      host: 127.0.0.1
+      database: 0
+      port: 6379
+      expire: 1800
+      timeout: 0
+  redisson:
+    address: redis://127.0.0.1:6379
+  rabbitmq:
+    host: 127.0.0.1 # RabbitMq主机IP
+    port: 5672 # 默认5672,一致可不写
+    username: guest # 默认guest,一致可不写
+    password: guest # 默认guest,一致可不写
+    publisher-returns: true
+    publisher-confirms: true
+    listener:
+      simple:
+        acknowledge-mode:
+          acknowledge-mode: manual
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  typeAliasesPackage: com.sparksys.mall.admin.entity
+logging:
+  level:
+    root: info #日志配置DEBUG,INFO,WARN,ERROR
+    com.sparksys.mall.admin.dao: debug

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparksys.mall.admin.dao.SecKillProductDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sparksys.mall.admin.entity.SecKillProduct">
+        <id column="sec_kill_id" property="secKillId"/>
+        <result column="product_id" property="productId"/>
+        <result column="name" property="name"/>
+        <result column="stock_count" property="stockCount"/>
+        <result column="start_time" property="startTime"/>
+        <result column="end_time" property="endTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="version" property="version"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sec_kill_id, product_id, name, stock_count, start_time, end_time, create_time, version
+    </sql>
+
+</mapper>
