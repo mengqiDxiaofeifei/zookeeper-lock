@@ -11,15 +11,5 @@
         <module name="zookeeper-lock" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="product" target="1.8" />
-    </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="admin" options="" />
-      <module name="core" options="" />
-      <module name="product" options="" />
-    </option>
   </component>
 </project>
